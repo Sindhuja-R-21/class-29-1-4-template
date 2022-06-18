@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 var engine, world;
 var canvas, angle, tower, ground, cannon;
-
+var cannonBall;
 
 
 
@@ -22,7 +22,10 @@ function setup() {
   ground = new Ground(0, height - 1, width * 2, 1);
   tower = new Tower(150, 350, 160, 310);
   cannon = new Cannon(180, 110, 100, 50, angle);
-//create a object for cannonball
+  
+  //create object for cannonBall
+ 
+
 }
 
 function draw() {
@@ -37,7 +40,9 @@ function draw() {
 
   cannon.display();
   tower.display();
-//display the cannonball 
+ 
+  //call display Function
+ 
 }
 
 
@@ -46,8 +51,7 @@ function draw() {
 
 
 function keyReleased() {
- //use  keydown to call the shoot function
- if(keyCode===DOWN_ARROW){
-   
- }
+  if (keyCode === DOWN_ARROW) {
+   //call shoot function
+  }
 }
