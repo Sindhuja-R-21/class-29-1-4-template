@@ -7,24 +7,19 @@ class CannonBall {
       isStatic: true
     };
     this.r = 40;
-//create a circle body
-//load the image
+
+   //create PE body
+    
+   //LoadImage
+    
     World.add(world, this.body);
   }
 
   shoot() {
-    //set the angle of ball to cannon
-    var velocity=P5.Vector.fromAngle(cannon.angle);
+    var velocity = p5.Vector.fromAngle(cannon.angle);
     velocity.mult(20);
-
-    //set static value to the body
-    Matter.Body.setStatic(this.body,false)
-
-     //set the velocity for the ball to make the ball to move
-    Matter.Body.setVelocity(this.body,{x:velocity.x,y:velocity.y})
-    
-    
-   
+    Matter.Body.setStatic(this.body, false);
+    Matter.Body.setVelocity(this.body, { x: velocity.x, y: velocity.y });
   }
 
   display() {
@@ -34,9 +29,10 @@ class CannonBall {
     translate(pos.x, pos.y);
     rotate(angle);
     imageMode(CENTER);
-//display the image
+    
+   //Image function
+    
     pop();
 
     }
   }
-
